@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				bluestacks: {
+					dark: '#1A1F2C',
+					darker: '#131720',
+					light: '#222831',
+					blue: '#0EA5E9',
+					gold: '#F97316',
+					green: '#10B981'
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-gold': {
+					'0%, 100%': { 
+						boxShadow: '0 0 0 0 rgba(249, 115, 22, 0)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 0 8px rgba(249, 115, 22, 0.4)' 
+					}
+				},
+				'pulse-blue': {
+					'0%, 100%': { 
+						boxShadow: '0 0 0 0 rgba(14, 165, 233, 0)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 0 8px rgba(14, 165, 233, 0.4)' 
+					}
+				},
+				'slide-in': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				'slide-out': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gold': 'pulse-gold 2s infinite',
+				'pulse-blue': 'pulse-blue 2s infinite',
+				'slide-in': 'slide-in 0.3s ease-out',
+				'slide-out': 'slide-out 0.3s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'fade-out': 'fade-out 0.3s ease-out'
 			}
 		}
 	},
